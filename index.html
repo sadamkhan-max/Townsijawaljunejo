@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>City Sijawal Junejo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- FontAwesome Icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<!-- Navbar -->
+<header>
+    <div class="logo">Sijawal Junejo</div>
+    <nav>
+        <a href="#hero">Home</a>
+        <a href="#about">About</a>
+        <a href="#news">News</a>
+        <a href="#events">Events</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<!-- Hero Section -->
+<section id="hero" class="hero">
+    <div class="hero-content">
+        <h1>Welcome to Sijawal Junejo</h1>
+        <p>The heart of culture, community, and scenic beauty.</p>
+        <a href="#about" class="btn">Discover More</a>
+    </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="about">
+    <h2>About Our Town</h2>
+    <p>Sijawal Junejo is a town located in District Kambar@shahdadkot Sindh, Pakistan. </p>
+    <div class="features">
+        <div class="feature-card">
+            <i class="fas fa-landmark"></i>
+            <h3>Population</h3>
+            <p>There are arround 20k people in sijawal junejo</p>
+        </div>
+        <div class="feature-card">
+            <i class="fas fa-tree"></i>
+            <h3>Nature</h3>
+            <p>Green spaces, rivers, and scenic landscapes.</p>
+        </div>
+        <div class="feature-card">
+            <i class="fas fa-users"></i>
+            <h3>Community</h3>
+            <p>There are varaities of the communities.</p>
+        </div>
+    </div>
+</section>
+
+<!-- News Section -->
+<section id="news" class="news">
+    <h2>Latest News</h2>
+    <div class="cards">
+        <div class="card">
+            <h3>Community Festival</h3>
+            <p>This weekend join the annual festival at the town center with music, food, and games.</p>
+        </div>
+        <div class="card">
+            <h3>New Library Opening</h3>
+            <p>The town library is now open to the public with modern facilities and reading areas.</p>
+        </div>
+        <div class="card">
+            <h3>Road Renovation</h3>
+            <p>Main roads are being upgraded to improve safety and connectivity in the town.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Events Section -->
+<section id="events" class="events">
+    <h2>Upcoming Events</h2>
+    <div class="event-list">
+        <div class="event">
+            <h3>Town Clean-Up Drive</h3>
+            <p>Date: 20th Feb 2026 | Location: Central Park</p>
+        </div>
+        <div class="event">
+            <h3>Local Art Exhibition</h3>
+            <p>Date: 25th Feb 2026 | Location: Community Hall</p>
+        </div>
+        <div class="event">
+            <h3>Sports Tournament</h3>
+            <p>Date: 1st Mar 2026 | Location: Sports Ground</p>
+        </div>
+    </div>
+</section>
+
+<!-- Gallery Section -->
+<section id="gallery" class="gallery">
+    <h2>Gallery</h2>
+    <p>Photos of Sijawal Junejo.
+  <h2>Town Landmark</h2>
+
+  <img src="sijawal.jpg"
+       alt="Sijawal Junejo"
+       style="width:90%; max-width:800px; border-radius:15px; cursor:pointer;"
+       onclick="openImage(this.src)">
+
+</div>
+
+<!-- Zoom Popup -->
+<div id="popup"
+     style="display:none; position:fixed; top:0; left:0;
+            width:100%; height:100%;
+            background:rgba(0,0,0,0.9);
+            align-items:center; justify-content:center;"
+     onclick="this.style.display='none'">
+
+  <img id="popupImg" style="max-width:90%; max-height:90%; border-radius:10px;">
+
+</div>
+
+<script>
+function openImage(src) {
+  document.getElementById("popup").style.display = "flex";
+  document.getElementById("popupImg").src = src;
+}
+</script>
+)</p>
+    <div class="photo-grid">
+        <!-- Replace src with your own uploaded images later -->
+        <div class="photo-card"><img src="https://source.unsplash.com/280x200/?village" alt="Town Photo"></div>
+        <div class="photo-card"><img src="https://source.unsplash.com/280x200/?river" alt="River"></div>
+        <div class="photo-card"><img src="https://source.unsplash.com/280x200/?market" alt="Market"></div>
+        <div class="photo-card"><img src="https://source.unsplash.com/280x200/?festival" alt="Festival"></div>
+        <div class="photo-card"><img src="https://source.unsplash.com/280x200/?school" alt="School"></div>
+        <div class="photo-card"><img src="https://source.unsplash.com/280x200/?mosque" alt="Mosque"></div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <p>Have questions or suggestions? Get in touch with our town representatives.</p>
+    <div class="contact-info">
+        <p><i class="fas fa-envelope"></i> Email: info@sijawaljunejo.com</p>
+        <p><i class="fas fa-phone"></i> Phone: +92 300 1234567</p>
+        <p><i class="fas fa-map-marker-alt"></i> Address: Sijawal Junejo, District Kambar&Shahdadkot, Sindh, Pakistan</p>
+    </div>
+</section>
+<section style="padding:40px; text-align:center;">
+  <h2>Famous Landmark of Sijawal Junejo</h2>
+
+  <img src="sijawal.jpg"
+       alt="Sijawal Junejo Tower"
+       style="width:90%; max-width:900px; border-radius:15px; box-shadow:0 10px 30px rgba(0,0,0,0.3);">
+
+</section>
+<div style="text-align:center; padding:40px;">
+
+</div>
+
+<!-- Zoom Popup -->
+<div id="popup"
+     style="display:none; position:fixed; top:0; left:0;
+            width:100%; height:100%;
+            background:rgba(0,0,0,0.9);
+            align-items:center; justify-content:center;"
+     onclick="this.style.display='none'">
+
+  <img id="popupImg" style="max-width:90%; max-height:90%; border-radius:10px;">
+
+</div>
+
+<script>
+function openImage(src) {
+  document.getElementById("popup").style.display = "flex";
+  document.getElementById("popupImg").src = src;
+}
+</script>
+
+<!-- Footer -->
+<footer>
+                  <p>© 2026 Sijawal Junejo. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>

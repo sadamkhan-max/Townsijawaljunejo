@@ -1,0 +1,64 @@
+// News management
+let newsArray = JSON.parse(localStorage.getItem('newsArray')) || [];
+let eventArray = JSON.parse(localStorage.getItem('eventArray')) || [];
+let photoArray = JSON.parse(localStorage.getItem('photoArray')) || [];
+
+function saveData() {
+    localStorage.setItem('newsArray', JSON.stringify(newsArray));
+    localStorage.setItem('eventArray', JSON.stringify(eventArray));
+    localStorage.setItem('photoArray', JSON.stringify(photoArray));
+}
+
+// Render Functions
+function renderNews(){
+    const list = document.getElementById('newsList');
+    list.innerHTML='';
+    newsArray.forEach((item, index) => {
+        const li = document.createElement('li');
+        li.innerHTML = `<strong>${item.title}</strong> - ${item.desc} <button onclick="deleteNews(${index})">Delete</button>`;
+        list.appendChild(li);
+    });
+}
+
+function renderEvents(){
+    const list = document.getElementById('eventList');
+    list.innerHTML='';
+    eventArray.forEach((item,index)=>{
+        const li = document.createElement('li');
+        li.innerHTML=`<strong>${item.title}</strong> - ${item.date} @ ${item.location} <button onclick="deleteEvent(${index})">Delete</button>`;
+        list.appendChild(li);
+    });
+}
+
+function renderPhotos(){
+    const grid = document.getElementById('photoGrid');
+    grid.innerHTML='';
+    photoArray.forEach((url,index)=>{
+        const div = document.createElement('div');
+        div.classList.add('photo-card');
+        div.innerHTML = `<img src="${url}" alt="Photo ${index+1}"> <button onclick="deletePhoto(${index})">Delete</button>`;
+        grid.appendChild(div);
+    });
+}
+
+// CRUD Functions
+function addNews() {
+    const title = document.getElementById('newsTitle').value;
+    const desc = document.getElementById('newsDesc').value;
+    if(title && desc){
+        newsArray.push({title, desc});
+        saveData();
+        renderNews();
+        document.getElementById('newsTitle').value='';
+        document.getElementById('newsDesc').value='';
+    }
+}
+
+function deleteNews(index){
+    newsArray.splice(index,1);
+    saveData();
+    renderNews();
+}
+
+function addEvent(){
+    const title = document.getElementById('eventTitle').value;
